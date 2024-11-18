@@ -79,6 +79,82 @@
 # - Repeat the loop as needed.
 # - AFTER the loop, print how many orders were placed.
 
+class Pizza:
+    def __init__(self,size,sauce):
+        self.size = size
+        if size.isnumeric():
+            pass
+        else:
+            self.size = 10
+            
+        if int(self.size) >= 10:
+            pass
+        else:
+            self.size = 10 
+        self.sauce = sauce
+        self.toppings = ["cheese"]
+        
+    def size_set(self, data):
+        self.size = data  # Set sauce
+        if data.isnumeric():
+            pass
+        else:
+            self.size = 10
+            
+        if int(self.size) >= 10:
+            pass
+        else:
+            self.size = 10
+            
+    def toppings_set(self, data):
+        self.toppings = [data]
+        
+    def toppings_add(self, data):
+        isinstance(data, list)
+        self.toppings.extend(data)
+            
+    def get_size(self):
+        size = f"{self.size}"
+        return self.size
+    
+    def get_sauce(self):
+        sauce = f"{self.sauce}"
+        return self.sauce
+    
+    def get_toppings(self):
+        toppings = f"{self.toppings}"
+        return self.toppings
+
+        
+    def toppings_amount(self):
+        toppings = f"{self.toppings}"
+        return len(self.toppings)
+
+class Pizzaria:
+    def __init__(self):
+        self.orders = 0
+        self.price_toping = .30
+        self.price_inch = .60
+    def place_order():
+        size = input("Enter Size ")
+        sauce = input("Enter Sauce will default to red if nothing is answered ")
+        topping = " "
+        topping2 = []
+        while topping != "":
+            topping = input("Add a topping, ")
+            if topping != "":
+                topping2.append(topping)
+            else:
+                pass
+        print(topping2)
+            
+        self.orders = self.orders + 1
+    #def get_price(self):
+     #   pizza.get_size * self.price_inch + pizza.toppings_amount * self.price_inch
+     #def getNumberOfOrders(self):
+      #   print(self.orders)
+
+Pizzaria.place_order()
 
 # Example output:
 """
